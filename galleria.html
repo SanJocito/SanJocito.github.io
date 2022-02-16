@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Photography by J</title>
+    <!-- Latest compiled and minified CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <!-- Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1 shrink-to-fit=no">
+    <!--To ensure proper rendering and touch zooming on mobile-->
+    <link rel="stylesheet" href="tyylit.css">
+    <link rel="stylesheet" type="text/css"
+        href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.css" />
+    <link rel="stylesheet" type="text/css"
+        href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick-theme.css" />
+    <!--Icon library-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+</head>
+
+<body onload="LoadInitialContent()">
+    <div class="box d-flex justify-content-center flex-column mb-0">
+        <figure><img src="kuvat/uusietusivu.jpg" width="100%" height="auto"></figure>
+        <!--navigointi-->
+        <div>
+            <nav class="navbar navbar-expand-md navbar-light p-3">
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav">
+                        <li class="nav-item active">
+                            <a class="nav-link" href="index.html">Home <span class="sr-only"></span></a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="valokuvaajille.html">Valokuvaajille</a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="galleria.html">Galleria</a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="portfolio.html">Portfolio</a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="minusta.html">Minusta</a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="yhteystiedot.html">Yhteystiedot</a>
+                        </li>
+                    </ul>
+                </div>
+                <a class="navbar-brand pull-right" href="index.html">Photography by J</a>
+            </nav>
+        </div>
+    </div>
+
+    <!--Galleria-->
+    <h1>Galleria</h1>
+    <br>
+    <div class="galleryIntro">
+        <p>"Kameran kanssa kulkiessa ja kuvatessa on otettava usein monia satoja kuvia.<br> 
+            Näistä monista kuvista vain kourallinen on usein onnistuneita
+             tai omaa taiteellista silmää miellyttäviä. <br>
+             On valoitus väärin, kohde epätarkka, linssissä roska, akku loppu, <br>vettä sataa
+              tai muita häiritseviä tekijöitä kuvaustilanteessa.<br>
+             Loppujen lopuksi niistä kymmenestä tuhannesta kuvasta löytyy joka kerta onnistuneita 
+             kuvia. <br>Tässä alla on muutamia sellaisia otoksia."</p>
+    </div>
+    <br>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-4 col-md-12 mb-4">
+                <img src="kuvat/Aku.jpg" class="img-fluid mb-4">
+                <img src="kuvat/vesi2.jpg" class="img-fluid mb-4" data-wow-delay="0.3s">
+            </div>
+
+            <!--keskirivi-->
+            <div class="col-lg-4 col-md-6 mb-4">
+                <img src="kuvat/upinthesky.jpg" class="img-fluid mb-4" alt="" data-wow-delay="0.1s">
+                <img src="kuvat/1-IMG_0503.JPG" class="img-fluid mb-4" alt="" data-wow-delay="0.4s">
+                <img src="kuvat/jaapuikko.JPG" class="img-fluid mb-4">
+
+            </div>
+
+            <div class="col-lg-4 col-md-6 mb-4">
+                <img src="kuvat/Raketti.jpg" class="img-fluid mb-4"
+                    alt="" data-wow-delay="0.2s">
+                <img src="kuvat/taivas.JPG" class="img-fluid mb-4"
+                    alt="" data-wow-delay="0.5s">
+              <img src="kuvat/kuu.jpg" class="img-fluid mb-4">
+            </div>
+        </div>
+    </div>
+
+    <hr>
+    <footer>
+        <p class="some"><a href="https://www.instagram.com/accounts/login/" class="fa fa-instagram"></a> Photography by
+            J</p>
+    </footer>
+    <button onclick="topFunction()" id="btnYlos" title="Ylös">Ylös</button>
+
+    <script>
+        btnGoUp = document.getElementById("btnYlos");
+        window.onscroll = function () { scrollFunction() };
+
+        function scrollFunction() {
+            if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+                btnGoUp.style.display = "block";
+            } else {
+                btnGoUp.style.display = "none";
+            }
+        }        
+        function topFunction() {
+            document.body.scrollTop = 0; //Safari
+            document.documentElement.scrollTop = 0; // Chrome, Firefox, IE and Opera
+        }
+    </script>
+</body>
+
+</html>
